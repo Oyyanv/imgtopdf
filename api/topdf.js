@@ -11,7 +11,7 @@ const upload = multer({ storage });
 const app = express();
 
 // API untuk mengonversi gambar ke PDF
-app.post("/api/convert", upload.array("images"), async (req, res) => {
+app.post("/api/topdf", upload.array("images"), async (req, res) => {
   try {
     // Periksa apakah ada file yang diunggah
     if (!req.files || req.files.length === 0) {
